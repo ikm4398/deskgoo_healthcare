@@ -1,0 +1,525 @@
+{
+ "actions": [],
+ "autoname": "GH-ER.#####",
+ "creation": "2025-09-11 13:05:24.175040",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "section_break_jddr",
+  "amended_from",
+  "patient_details_section",
+  "patient",
+  "patient_name",
+  "age",
+  "gender",
+  "column_break_jvsn",
+  "contact_number",
+  "address",
+  "admission_details_section",
+  "admission_date",
+  "ward_number",
+  "column_break_shis",
+  "bed_number",
+  "ip_number",
+  "diagnosis_details_section",
+  "provisional_diagnosis",
+  "column_break_ubtv",
+  "final_diagnosis",
+  "transfer_details_section",
+  "discharge_date",
+  "column_break_coop",
+  "patient_status",
+  "section_break_otkb",
+  "discharge_by",
+  "column_break_lvvf",
+  "condition_at_discharge",
+  "on_duty_healthcare_practitioners_section",
+  "table_brjs",
+  "on_duty_consultant_doctor_section",
+  "consultant_doctor",
+  "column_break_rigw",
+  "department",
+  "remark_section",
+  "remark",
+  "emergency_service_details_tab",
+  "vital_signs_section",
+  "body_temperature",
+  "heart_rate__pulse",
+  "respiratory_rate",
+  "oxygen_level",
+  "column_break_fegn",
+  "blood_pressure_systolic",
+  "blood_pressure_diastolic",
+  "blood_pressure",
+  "examinations_section",
+  "general_condition_gc",
+  "glasgow_coma_scale_gcs",
+  "chest",
+  "cardiovascular_system_cvs",
+  "column_break_sqdl",
+  "per_abdomen_pa",
+  "central_nervous_system_cns",
+  "pupil_right",
+  "pupil_left",
+  "section_break_hzgi",
+  "jalccod_general_signs",
+  "power_assessment_section",
+  "right_upper_limb_rul",
+  "left_upper_limb_lul",
+  "column_break_taer",
+  "right_lower_limb_rll",
+  "left_lower_limb_lll",
+  "section_break_laok",
+  "neck_rigidity",
+  "chest_compression",
+  "pelvic_compression",
+  "column_break_wqkp",
+  "spine",
+  "treatment_diagnostics_section",
+  "investigations",
+  "column_break_kgyg",
+  "prescription_rx"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "eme",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "patient.custom_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1,
+   "show_on_timeline": 1
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "patient.custom_address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_details_section",
+   "fieldtype": "Section Break",
+   "label": "Patient Details"
+  },
+  {
+   "fieldname": "column_break_jvsn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jddr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "admission_details_section",
+   "fieldtype": "Section Break",
+   "label": "Admission Details"
+  },
+  {
+   "fieldname": "admission_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Admission Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "discharge_date",
+   "fieldtype": "Datetime",
+   "label": "Discharge Date"
+  },
+  {
+   "fieldname": "bed_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bed Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ip_number",
+   "fieldtype": "Data",
+   "label": "I.P Number"
+  },
+  {
+   "fieldname": "provisional_diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Provisional Diagnosis"
+  },
+  {
+   "fieldname": "final_diagnosis",
+   "fieldtype": "Small Text",
+   "label": "Final Diagnosis"
+  },
+  {
+   "fieldname": "column_break_ubtv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosis_details_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis Details"
+  },
+  {
+   "fieldname": "transfer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shift/Transfer/Discharge Details"
+  },
+  {
+   "description": "Select Patient Status",
+   "fieldname": "patient_status",
+   "fieldtype": "Select",
+   "label": "Patient Status",
+   "options": "--Select Patient Status--\nADMIT\nDOPR\nLAMA\nDAMA\nEXPIRE\nDISCHARGE\nREFER\nBD"
+  },
+  {
+   "fieldname": "on_duty_healthcare_practitioners_section",
+   "fieldtype": "Section Break",
+   "label": "On-Duty Healthcare Practitioners/ Medical Officers"
+  },
+  {
+   "fieldname": "table_brjs",
+   "fieldtype": "Table",
+   "options": "On-Duty Healthcare Practitioners Table"
+  },
+  {
+   "fieldname": "column_break_coop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discharge_by",
+   "fieldtype": "Small Text",
+   "label": "Discharge By"
+  },
+  {
+   "fieldname": "condition_at_discharge",
+   "fieldtype": "Small Text",
+   "label": "Condition at Discharge"
+  },
+  {
+   "fieldname": "section_break_otkb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lvvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultant_doctor",
+   "fieldtype": "Link",
+   "label": "Consultant Doctor",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "consultant_doctor.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "column_break_rigw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "on_duty_consultant_doctor_section",
+   "fieldtype": "Section Break",
+   "label": "On-Duty Consultant Doctor"
+  },
+  {
+   "fieldname": "ward_number",
+   "fieldtype": "Data",
+   "label": "Ward Number"
+  },
+  {
+   "fieldname": "column_break_shis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "remark_section",
+   "fieldtype": "Section Break",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Text Editor",
+   "label": "Remark"
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "emergency_service_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Emergency Service Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "body_temperature",
+   "fieldtype": "Data",
+   "label": "Body Temperature"
+  },
+  {
+   "fieldname": "heart_rate__pulse",
+   "fieldtype": "Data",
+   "label": "Heart Rate / Pulse"
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Data",
+   "label": "Respiratory rate"
+  },
+  {
+   "fieldname": "blood_pressure_systolic",
+   "fieldtype": "Data",
+   "label": "Blood Pressure (Systolic)"
+  },
+  {
+   "fieldname": "blood_pressure_diastolic",
+   "fieldtype": "Data",
+   "label": "Blood Pressure (Diastolic)"
+  },
+  {
+   "fieldname": "blood_pressure",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Blood Pressure",
+   "options": "f\"{doc.blood_pressure_systolic}/{doc.blood_pressure_diastolic} mmHg\""
+  },
+  {
+   "fieldname": "oxygen_level",
+   "fieldtype": "Data",
+   "label": "Oxygen Level SpO2"
+  },
+  {
+   "bold": 1,
+   "fieldname": "vital_signs_section",
+   "fieldtype": "Section Break",
+   "label": "Vital Signs"
+  },
+  {
+   "fieldname": "column_break_fegn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "general_condition_gc",
+   "fieldtype": "Select",
+   "label": "General Condition (GC)",
+   "options": "\nGood\nFair\nPoor\nCritical"
+  },
+  {
+   "default": "0",
+   "fieldname": "glasgow_coma_scale_gcs",
+   "fieldtype": "Data",
+   "label": "Glasgow Coma Scale (GCS)"
+  },
+  {
+   "fieldname": "jalccod_general_signs",
+   "fieldtype": "Table",
+   "label": "JALCCOD (General Signs)",
+   "options": "General Sign"
+  },
+  {
+   "fieldname": "cardiovascular_system_cvs",
+   "fieldtype": "Data",
+   "label": "Cardiovascular System (CVS)"
+  },
+  {
+   "fieldname": "per_abdomen_pa",
+   "fieldtype": "Data",
+   "label": "Per Abdomen (P/A)"
+  },
+  {
+   "fieldname": "central_nervous_system_cns",
+   "fieldtype": "Data",
+   "label": "Central Nervous System (CNS)"
+  },
+  {
+   "fieldname": "chest",
+   "fieldtype": "Data",
+   "label": "Chest"
+  },
+  {
+   "fieldname": "column_break_sqdl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pupil_right",
+   "fieldtype": "Select",
+   "label": "Pupil Right",
+   "options": "\nNormal\nDilated\nConstricted\nSluggish\nFixed"
+  },
+  {
+   "fieldname": "pupil_left",
+   "fieldtype": "Select",
+   "label": "Pupil Left",
+   "options": "\nNormal\nDilated\nConstricted\nSluggish\nFixed"
+  },
+  {
+   "bold": 1,
+   "fieldname": "power_assessment_section",
+   "fieldtype": "Section Break",
+   "label": "Power Assessment"
+  },
+  {
+   "fieldname": "right_upper_limb_rul",
+   "fieldtype": "Select",
+   "label": "Right Upper Limb (RUL)",
+   "options": "\n0/5 - No muscle contraction\n1/5 - Flicker or trace of contraction\n2/5 - Active movement, gravity eliminated\n3/5 - Active movement against gravity\n4/5 - Active movement against gravity and resistance\n5/5 - Normal power"
+  },
+  {
+   "fieldname": "left_upper_limb_lul",
+   "fieldtype": "Select",
+   "label": "Left Upper Limb (LUL)",
+   "options": "\n0/5 - No muscle contraction\n1/5 - Flicker or trace of contraction\n2/5 - Active movement, gravity eliminated\n3/5 - Active movement against gravity\n4/5 - Active movement against gravity and resistance\n5/5 - Normal power"
+  },
+  {
+   "fieldname": "right_lower_limb_rll",
+   "fieldtype": "Select",
+   "label": "Right Lower Limb (RLL)",
+   "options": "\n0/5 - No muscle contraction\n1/5 - Flicker or trace of contraction\n2/5 - Active movement, gravity eliminated\n3/5 - Active movement against gravity\n4/5 - Active movement against gravity and resistance\n5/5 - Normal power"
+  },
+  {
+   "fieldname": "left_lower_limb_lll",
+   "fieldtype": "Select",
+   "label": "Left Lower Limb (LLL)",
+   "options": "\n0/5 - No muscle contraction\n1/5 - Flicker or trace of contraction\n2/5 - Active movement, gravity eliminated\n3/5 - Active movement against gravity\n4/5 - Active movement against gravity and resistance\n5/5 - Normal power"
+  },
+  {
+   "fieldname": "column_break_taer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_laok",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "neck_rigidity",
+   "fieldtype": "Check",
+   "label": "Neck Rigidity"
+  },
+  {
+   "default": "0",
+   "fieldname": "chest_compression",
+   "fieldtype": "Check",
+   "label": "Chest Compression"
+  },
+  {
+   "default": "0",
+   "fieldname": "pelvic_compression",
+   "fieldtype": "Check",
+   "label": "Pelvic Compression"
+  },
+  {
+   "fieldname": "spine",
+   "fieldtype": "Small Text",
+   "label": "Spine"
+  },
+  {
+   "fieldname": "section_break_hzgi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "investigations",
+   "fieldtype": "Small Text",
+   "label": "Investigations"
+  },
+  {
+   "bold": 1,
+   "fieldname": "examinations_section",
+   "fieldtype": "Section Break",
+   "label": "Examinations"
+  },
+  {
+   "bold": 1,
+   "fieldname": "treatment_diagnostics_section",
+   "fieldtype": "Section Break",
+   "label": "Treatment & Diagnostics"
+  },
+  {
+   "fieldname": "prescription_rx",
+   "fieldtype": "Small Text",
+   "label": "Prescription (Rx)"
+  },
+  {
+   "fieldname": "column_break_wqkp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kgyg",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-12 00:17:59.452565",
+ "modified_by": "Administrator",
+ "module": "Deskgoo Healthcare",
+ "name": "eme",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "patient_name"
+}
