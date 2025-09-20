@@ -7,6 +7,11 @@ app_license = "mit"
 
 # Apps
 # ------------------
+# Import and execute monkey patch for app titles
+from deskgoo_healthcare.patches.override_hook_titles import override_hook_titles
+# Execute during hook loading
+override_hook_titles()
+
 # Custom JS
 doctype_js = {
     "Patient": [
