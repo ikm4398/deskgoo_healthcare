@@ -18,18 +18,16 @@
   "address",
   "admission_details_section",
   "admission_date",
-  "ward_number",
-  "column_break_shis",
   "bed_number",
   "ip_number",
+  "column_break_shis",
+  "patient_status",
+  "admit_shift_to",
+  "discharge_date",
   "diagnosis_details_section",
   "provisional_diagnosis",
   "column_break_ubtv",
   "final_diagnosis",
-  "transfer_details_section",
-  "discharge_date",
-  "column_break_coop",
-  "patient_status",
   "section_break_otkb",
   "discharge_by",
   "column_break_lvvf",
@@ -40,6 +38,10 @@
   "consultant_doctor",
   "column_break_rigw",
   "department",
+  "section_break_dnbp",
+  "is_medical_legal_case",
+  "brought_by",
+  "brought_by_contact_number",
   "remark_section",
   "remark",
   "emergency_service_details_tab",
@@ -73,8 +75,8 @@
   "section_break_laok",
   "neck_rigidity",
   "chest_compression",
-  "pelvic_compression",
   "column_break_wqkp",
+  "pelvic_compression",
   "spine",
   "treatment_diagnostics_section",
   "investigations",
@@ -87,7 +89,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "eme",
+   "options": "Emergency Register ER",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -147,7 +149,7 @@
   {
    "fieldname": "admission_details_section",
    "fieldtype": "Section Break",
-   "label": "Admission Details"
+   "label": "Admission/ Shift/Transfer/Discharge Details"
   },
   {
    "fieldname": "admission_date",
@@ -165,8 +167,7 @@
    "fieldname": "bed_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Bed Number",
-   "reqd": 1
+   "label": "Bed Number"
   },
   {
    "fieldname": "ip_number",
@@ -193,11 +194,6 @@
    "label": "Diagnosis Details"
   },
   {
-   "fieldname": "transfer_details_section",
-   "fieldtype": "Section Break",
-   "label": "Shift/Transfer/Discharge Details"
-  },
-  {
    "description": "Select Patient Status",
    "fieldname": "patient_status",
    "fieldtype": "Select",
@@ -213,10 +209,6 @@
    "fieldname": "table_brjs",
    "fieldtype": "Table",
    "options": "On-Duty Healthcare Practitioners Table"
-  },
-  {
-   "fieldname": "column_break_coop",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "discharge_by",
@@ -256,11 +248,6 @@
    "fieldname": "on_duty_consultant_doctor_section",
    "fieldtype": "Section Break",
    "label": "On-Duty Consultant Doctor"
-  },
-  {
-   "fieldname": "ward_number",
-   "fieldtype": "Data",
-   "label": "Ward Number"
   },
   {
    "fieldname": "column_break_shis",
@@ -386,13 +373,13 @@
   },
   {
    "fieldname": "pupil_right",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Pupil Right",
    "options": "\nNormal\nDilated\nConstricted\nSluggish\nFixed"
   },
   {
    "fieldname": "pupil_left",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "label": "Pupil Left",
    "options": "\nNormal\nDilated\nConstricted\nSluggish\nFixed"
   },
@@ -453,8 +440,9 @@
    "label": "Pelvic Compression"
   },
   {
+   "default": "0",
    "fieldname": "spine",
-   "fieldtype": "Small Text",
+   "fieldtype": "Check",
    "label": "Spine"
   },
   {
@@ -490,16 +478,43 @@
   {
    "fieldname": "column_break_kgyg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dnbp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_medical_legal_case",
+   "fieldtype": "Check",
+   "label": "Is Medical Legal Case"
+  },
+  {
+   "fieldname": "brought_by",
+   "fieldtype": "Data",
+   "label": "Brought By"
+  },
+  {
+   "fieldname": "brought_by_contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "admit_shift_to",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Shift To Ward",
+   "options": "Healthcare Service Unit Type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-12 00:17:59.452565",
+ "modified": "2025-09-14 17:24:20.673375",
  "modified_by": "Administrator",
  "module": "Deskgoo Healthcare",
- "name": "eme",
+ "name": "Emergency Register ER",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [

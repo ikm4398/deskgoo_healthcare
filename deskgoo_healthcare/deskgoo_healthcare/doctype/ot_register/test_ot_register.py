@@ -13,9 +13,9 @@ IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
 
-class IntegrationTesteme(IntegrationTestCase):
+class IntegrationTestOTRegister(IntegrationTestCase):
 	"""
-	Integration tests for eme.
+	Integration tests for OTRegister.
 	Use this class for testing interactions between multiple components.
 	"""
 

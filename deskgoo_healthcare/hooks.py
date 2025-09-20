@@ -10,7 +10,7 @@ app_license = "mit"
 # Custom JS
 doctype_js = {
     "Patient": [
-        "public/js/custom_address_fetch_patient.js"
+        "public/js/custom_address_fetch_patient.js",
         ],
     "Employee": [
         "public/js/custom_address_fetch_employee.js",
