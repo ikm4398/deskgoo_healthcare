@@ -1,0 +1,28 @@
+{
+ "cards": [
+  {
+   "card": "In-Process IP Orders"
+  },
+  {
+   "card": "Total Active Items"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Asset Value Analytics",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-09-24 14:54:12.701887",
+ "dashboard_name": "Store Keeper",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-09-24 14:55:42.169674",
+ "modified_by": "Administrator",
+ "module": "Deskgoo Healthcare",
+ "name": "Store Keeper",
+ "owner": "Administrator"
+}

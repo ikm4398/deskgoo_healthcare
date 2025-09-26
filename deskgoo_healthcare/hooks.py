@@ -21,4 +21,9 @@ doctype_js = {
         "public/js/custom_address_fetch_employee.js",
     ]
 }
-
+# Hook into the Employee doctype for when update status also update user status
+doc_events = {
+    "Employee": {
+        "before_validate": "deskgoo_healthcare.patches.employee_and_user_sync.update_user_status"
+    }
+}
