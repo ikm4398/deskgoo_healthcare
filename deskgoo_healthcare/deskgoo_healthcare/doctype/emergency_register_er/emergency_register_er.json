@@ -12,31 +12,34 @@
   "patient",
   "patient_name",
   "age",
-  "gender",
   "column_break_jvsn",
+  "gender",
   "contact_number",
   "address",
   "admission_details_section",
   "admission_date",
-  "bed_number",
-  "ip_number",
-  "column_break_shis",
   "patient_status",
-  "admit_shift_to",
   "discharge_date",
-  "diagnosis_details_section",
+  "column_break_shis",
+  "admit_shift_to",
+  "ip_number",
+  "bed_number",
+  "diagnostics_treatment_details_section",
   "provisional_diagnosis",
-  "column_break_ubtv",
+  "investigations",
+  "column_break_kgyg",
   "final_diagnosis",
+  "prescription_rx",
   "section_break_otkb",
   "discharge_by",
   "column_break_lvvf",
   "condition_at_discharge",
-  "on_duty_healthcare_practitioners_section",
-  "table_brjs",
+  "on_duty_medical_officers_paramedical_staff_section",
+  "medical_officer",
+  "column_break_ssky",
+  "paramedical_staff",
   "on_duty_consultant_doctor_section",
   "consultant_doctor",
-  "column_break_rigw",
   "department",
   "section_break_dnbp",
   "is_medical_legal_case",
@@ -44,12 +47,13 @@
   "brought_by_contact_number",
   "remark_section",
   "remark",
-  "emergency_service_details_tab",
+  "history_physical_examination_tab",
   "vital_signs_section",
   "body_temperature",
   "heart_rate__pulse",
   "respiratory_rate",
   "oxygen_level",
+  "is_o2",
   "column_break_fegn",
   "blood_pressure_systolic",
   "blood_pressure_diastolic",
@@ -64,8 +68,6 @@
   "central_nervous_system_cns",
   "pupil_right",
   "pupil_left",
-  "section_break_hzgi",
-  "jalccod_general_signs",
   "power_assessment_section",
   "right_upper_limb_rul",
   "left_upper_limb_lul",
@@ -73,15 +75,12 @@
   "right_lower_limb_rll",
   "left_lower_limb_lll",
   "section_break_laok",
+  "jalccod",
   "neck_rigidity",
   "chest_compression",
   "column_break_wqkp",
   "pelvic_compression",
-  "spine",
-  "treatment_diagnostics_section",
-  "investigations",
-  "column_break_kgyg",
-  "prescription_rx"
+  "spine"
  ],
  "fields": [
   {
@@ -185,30 +184,11 @@
    "label": "Final Diagnosis"
   },
   {
-   "fieldname": "column_break_ubtv",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "diagnosis_details_section",
-   "fieldtype": "Section Break",
-   "label": "Diagnosis Details"
-  },
-  {
    "description": "Select Patient Status",
    "fieldname": "patient_status",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Patient Status",
-   "options": "--Select Patient Status--\nADMIT\nDOPR\nLAMA\nDAMA\nEXPIRE\nDISCHARGE\nREFER\nBD"
-  },
-  {
-   "fieldname": "on_duty_healthcare_practitioners_section",
-   "fieldtype": "Section Break",
-   "label": "On-Duty Healthcare Practitioners/ Medical Officers"
-  },
-  {
-   "fieldname": "table_brjs",
-   "fieldtype": "Table",
-   "options": "On-Duty Healthcare Practitioners Table"
+   "options": "Patient Status"
   },
   {
    "fieldname": "discharge_by",
@@ -241,10 +221,6 @@
    "label": "Department"
   },
   {
-   "fieldname": "column_break_rigw",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "on_duty_consultant_doctor_section",
    "fieldtype": "Section Break",
    "label": "On-Duty Consultant Doctor"
@@ -272,17 +248,12 @@
   },
   {
    "bold": 1,
-   "fieldname": "emergency_service_details_tab",
-   "fieldtype": "Tab Break",
-   "label": "Emergency Service Details"
-  },
-  {
-   "bold": 1,
    "fieldname": "details_tab",
    "fieldtype": "Tab Break",
    "label": "Details"
   },
   {
+   "description": "Temperatures In \u00b0F",
    "fieldname": "body_temperature",
    "fieldtype": "Data",
    "label": "Body Temperature"
@@ -310,7 +281,6 @@
   {
    "fieldname": "blood_pressure",
    "fieldtype": "Data",
-   "is_virtual": 1,
    "label": "Blood Pressure",
    "options": "f\"{doc.blood_pressure_systolic}/{doc.blood_pressure_diastolic} mmHg\""
   },
@@ -340,12 +310,6 @@
    "fieldname": "glasgow_coma_scale_gcs",
    "fieldtype": "Data",
    "label": "Glasgow Coma Scale (GCS)"
-  },
-  {
-   "fieldname": "jalccod_general_signs",
-   "fieldtype": "Table",
-   "label": "JALCCOD (General Signs)",
-   "options": "General Sign"
   },
   {
    "fieldname": "cardiovascular_system_cvs",
@@ -446,10 +410,6 @@
    "label": "Spine"
   },
   {
-   "fieldname": "section_break_hzgi",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "investigations",
    "fieldtype": "Small Text",
    "label": "Investigations"
@@ -459,12 +419,6 @@
    "fieldname": "examinations_section",
    "fieldtype": "Section Break",
    "label": "Examinations"
-  },
-  {
-   "bold": 1,
-   "fieldname": "treatment_diagnostics_section",
-   "fieldtype": "Section Break",
-   "label": "Treatment & Diagnostics"
   },
   {
    "fieldname": "prescription_rx",
@@ -505,13 +459,58 @@
    "ignore_user_permissions": 1,
    "label": "Shift To Ward",
    "options": "Healthcare Service Unit Type"
+  },
+  {
+   "fieldname": "column_break_ssky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "medical_officer",
+   "fieldtype": "Table",
+   "label": "Medical Officer",
+   "options": "On-Duty Medical Officer Table"
+  },
+  {
+   "fieldname": "paramedical_staff",
+   "fieldtype": "Table",
+   "label": "Paramedical Staff",
+   "options": "On-Duty Paramedical Staff"
+  },
+  {
+   "fieldname": "on_duty_medical_officers_paramedical_staff_section",
+   "fieldtype": "Section Break",
+   "label": "On Duty Medical Officers & Paramedical Staff"
+  },
+  {
+   "default": "0",
+   "fieldname": "jalccod",
+   "fieldtype": "Check",
+   "label": "JALCCOD"
+  },
+  {
+   "bold": 1,
+   "fieldname": "diagnostics_treatment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnostics & Treatment Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "history_physical_examination_tab",
+   "fieldtype": "Tab Break",
+   "label": "History & Physical Examination"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_o2",
+   "fieldtype": "Check",
+   "label": "Is O2"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-09-14 17:24:20.673375",
+ "modified": "2025-09-29 12:52:49.240111",
  "modified_by": "Administrator",
  "module": "Deskgoo Healthcare",
  "name": "Emergency Register ER",

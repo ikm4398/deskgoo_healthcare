@@ -1,25 +1,37 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-09-18 19:14:45.031358",
+ "autoname": "field:patient_status",
+ "creation": "2025-09-29 12:44:37.521548",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_dupn"
+  "patient_status",
+  "details"
  ],
  "fields": [
   {
-   "fieldname": "section_break_dupn",
-   "fieldtype": "Section Break"
+   "fieldname": "patient_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Patient Status",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Small Text",
+   "label": "Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-18 19:14:45.031358",
+ "modified": "2025-09-29 12:54:36.857986",
  "modified_by": "Administrator",
  "module": "Deskgoo Healthcare",
- "name": "Blog Post",
+ "name": "Patient Status",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -36,6 +48,7 @@
   }
  ],
  "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []

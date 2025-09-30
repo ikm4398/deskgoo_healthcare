@@ -6,13 +6,15 @@ app_email = "a@a.a"
 app_license = "mit"
 
 # Apps
-# ------------------
-# Import and execute monkey patch for app titles
-from deskgoo_healthcare.patches.override_hook_titles import override_hook_titles
-# Execute during hook loading
-override_hook_titles()
+import importlib
 
-# Custom JS
+# Custom Re-Branding Apps
+try:
+    override_module = importlib.import_module(f"{app_name}.patches.custom_rebrand_apps")
+    override_module.override_hook_titles()
+except ModuleNotFoundError:
+    pass
+# For update address dynamically based on selected value
 doctype_js = {
     "Patient": [
         "public/js/custom_address_fetch_patient.js",
@@ -24,6 +26,6 @@ doctype_js = {
 # Hook into the Employee doctype for when update status also update user status
 doc_events = {
     "Employee": {
-        "before_validate": "deskgoo_healthcare.patches.employee_and_user_sync.update_user_status"
+        "before_validate": f"{app_name}.patches.employee_and_user_sync.update_user_status"
     }
 }

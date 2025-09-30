@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class GeneralSign(Document):
+class OnDutyMedicalOfficerTable(Document):
 	pass

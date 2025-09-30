@@ -1,14 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-09-11 16:45:22.209125",
+ "creation": "2025-09-29 10:35:27.477996",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "section_break_cuom",
   "healthcare_practitioner",
-  "designation_role",
-  "medical_department",
   "remark"
  ],
  "fields": [
@@ -18,19 +17,9 @@
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "in_list_view": 1,
-   "label": "Healthcare Practitioner/ Doctor",
+   "label": " Paramedical Staff",
    "options": "Healthcare Practitioner",
    "reqd": 1
-  },
-  {
-   "bold": 1,
-   "fetch_from": "healthcare_practitioner.designation",
-   "fieldname": "designation_role",
-   "fieldtype": "Data",
-   "ignore_user_permissions": 1,
-   "in_list_view": 1,
-   "label": "Designation/Role",
-   "read_only": 1
   },
   {
    "fieldname": "remark",
@@ -39,21 +28,18 @@
    "label": "Remark"
   },
   {
-   "fetch_from": "healthcare_practitioner.department",
-   "fieldname": "medical_department",
-   "fieldtype": "Data",
-   "label": "Medical Department",
-   "read_only": 1
+   "fieldname": "section_break_cuom",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-11 19:04:06.885192",
+ "modified": "2025-09-29 10:52:23.171303",
  "modified_by": "Administrator",
  "module": "Deskgoo Healthcare",
- "name": "On-Duty Healthcare Practitioners Table",
+ "name": "On-Duty Paramedical Staff",
  "owner": "Administrator",
  "permissions": [],
  "row_format": "Dynamic",

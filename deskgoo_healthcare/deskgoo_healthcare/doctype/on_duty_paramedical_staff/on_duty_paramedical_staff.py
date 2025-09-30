@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class BlogPost(Document):
+class OnDutyParamedicalStaff(Document):
 	pass

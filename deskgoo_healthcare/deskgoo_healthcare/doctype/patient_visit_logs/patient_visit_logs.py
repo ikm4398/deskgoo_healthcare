@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class OnDutyHealthcarePractitionersTable(Document):
+class PatientVisitLogs(Document):
 	pass

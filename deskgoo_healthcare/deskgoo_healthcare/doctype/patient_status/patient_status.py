@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class VisitLogs(Document):
+class PatientStatus(Document):
 	pass
