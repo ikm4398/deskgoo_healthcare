@@ -29,3 +29,18 @@ doc_events = {
         "before_validate": f"{app_name}.patches.employee_and_user_sync.update_user_status"
     }
 }
+
+fixtures = [
+    {
+        "dt": "Client Script",
+        "filters": [
+            ["name", "=", "Healthcare Practitioner Salutation"]
+        ]
+    },
+    {
+        "dt": "Server Script",
+        "filters": [
+            ["name", "=", "Healthcare Practitioner Salutation"]
+        ]
+    }
+]

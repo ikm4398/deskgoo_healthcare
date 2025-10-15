@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Healthcare Practitioner",
+  "enabled": 1,
+  "modified": "2025-09-30 20:42:26.041768",
+  "module": "Deskgoo Healthcare",
+  "name": "Healthcare Practitioner Salutation",
+  "script": "frappe.ui.form.on('Healthcare Practitioner', {\r\n    refresh(frm) {\r\n        // Run on load\r\n        toggle_salutation_editable(frm);\r\n        frm.set_df_property('practitioner_name', 'read_only', 1); // practitioner_name read-only\r\n        update_practitioner_name(frm);\r\n    },\r\n    employee(frm) {\r\n        // Run whenever employee changes\r\n        toggle_salutation_editable(frm);\r\n        update_practitioner_name(frm);\r\n    },\r\n    custom_salutation(frm) {\r\n        update_practitioner_name(frm);\r\n    },\r\n    first_name(frm) {\r\n        update_practitioner_name(frm);\r\n    },\r\n    middle_name(frm) {\r\n        update_practitioner_name(frm);\r\n    },\r\n    last_name(frm) {\r\n        update_practitioner_name(frm);\r\n    }\r\n});\r\n\r\nfunction toggle_salutation_editable(frm) {\r\n    if (frm.doc.employee) {\r\n        // If employee selected, keep salutation fetched + read-only\r\n        frm.set_df_property('custom_salutation', 'read_only', 1);\r\n    } else {\r\n        // If employee empty, make salutation editable\r\n        frm.set_df_property('custom_salutation', 'read_only', 0);\r\n    }\r\n    frm.refresh_field('custom_salutation');\r\n}\r\n\r\nfunction update_practitioner_name(frm) {\r\n    let parts = [];\r\n    if (frm.doc.custom_salutation) parts.push(frm.doc.custom_salutation);\r\n    if (frm.doc.first_name) parts.push(frm.doc.first_name);\r\n    if (frm.doc.middle_name) parts.push(frm.doc.middle_name);\r\n    if (frm.doc.last_name) parts.push(frm.doc.last_name);\r\n    let practitioner_name = parts.join(' ').trim();\r\n    \r\n    // Update practitioner_name in frm.doc without triggering dirty state\r\n    if (frm.doc.practitioner_name !== practitioner_name) {\r\n        frm.doc.practitioner_name = practitioner_name;\r\n        frm.refresh_field('practitioner_name');\r\n    }\r\n}",
+  "view": "Form"
+ }
+]
