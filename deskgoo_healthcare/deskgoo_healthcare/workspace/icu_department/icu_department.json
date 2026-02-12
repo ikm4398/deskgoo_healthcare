@@ -1,0 +1,45 @@
+{
+ "app": "deskgoo_healthcare",
+ "charts": [],
+ "content": "[{\"id\":\"BtngFAzJ0X\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ICU & HDCU Patient List\",\"col\":4}},{\"id\":\"8f6nnf9wz7\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2026-01-14 12:34:53.287186",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "healthcare",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "ICU Department",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-01-18 15:04:02.809634",
+ "modified_by": "Administrator",
+ "module": "Deskgoo Healthcare",
+ "name": "ICU Department",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "ICU Department"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "ICU & HDCU Patient List",
+   "link_to": "Inpatient Record",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "ICU Department",
+ "type": "Workspace"
+}

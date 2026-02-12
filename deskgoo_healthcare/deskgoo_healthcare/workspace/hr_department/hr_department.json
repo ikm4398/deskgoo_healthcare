@@ -1,0 +1,45 @@
+{
+ "app": "deskgoo_healthcare",
+ "charts": [],
+ "content": "[{\"id\":\"BtngFAzJ0X\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee\",\"col\":4}},{\"id\":\"8f6nnf9wz7\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2026-01-22 12:08:15.003214",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "hr",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "HR Department",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-01-22 12:33:14.907900",
+ "modified_by": "Administrator",
+ "module": "Deskgoo Healthcare",
+ "name": "HR Department",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "HR Manager"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Employee",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "HR Department",
+ "type": "Workspace"
+}

@@ -1,0 +1,45 @@
+{
+ "app": "deskgoo_healthcare",
+ "charts": [],
+ "content": "[{\"id\":\"BtngFAzJ0X\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ER List\",\"col\":3}},{\"id\":\"8f6nnf9wz7\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2025-12-20 14:03:06.151092",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "healthcare",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Emergency Department",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-01-14 13:16:00.836103",
+ "modified_by": "Administrator",
+ "module": "Deskgoo Healthcare",
+ "name": "Emergency Department",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Emergency User"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "ER List",
+   "link_to": "Inpatient Record",
+   "stats_filter": "[[\"Inpatient Record\",\"admission_service_unit_type\",\"=\",\"Emergency Ward\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Emergency Department",
+ "type": "Workspace"
+}

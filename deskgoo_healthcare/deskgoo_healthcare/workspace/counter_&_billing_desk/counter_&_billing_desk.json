@@ -1,0 +1,117 @@
+{
+ "app": "deskgoo_healthcare",
+ "charts": [],
+ "content": "[{\"id\":\"s22aOhiBg0\",\"type\":\"paragraph\",\"data\":{\"text\":\"Patient Entries\",\"col\":12}},{\"id\":\"2rpptGpWxJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"OPD Patient Entry\",\"col\":3}},{\"id\":\"oKr6FL5XiZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IPD Entry\",\"col\":3}},{\"id\":\"GF4JDrm-Hf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Manage Patients</b></span>\",\"col\":12}},{\"id\":\"mb9fZupqun\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Patient List\",\"col\":3}},{\"id\":\"mcoYrIEYva\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"IPD List\",\"col\":3}},{\"id\":\"E5kBeuFLCx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"OPD List\",\"col\":3}},{\"id\":\"QuSbZ07pnw\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports &amp; Masters\",\"col\":12}},{\"id\":\"RqBIAFuEZc\",\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}}]",
+ "creation": "2025-12-20 18:05:30.194002",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "healthcare",
+ "idx": 1,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Counter & Billing Desk",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Master",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Doctors",
+   "link_count": 0,
+   "link_to": "Healthcare Practitioner",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Departments",
+   "link_count": 0,
+   "link_to": "Medical Department",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ward",
+   "link_count": 0,
+   "link_to": "Healthcare Service Unit",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-01-27 16:07:48.078666",
+ "modified_by": "anisha899@gmail.com",
+ "module": "Deskgoo Healthcare",
+ "name": "Counter & Billing Desk",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Accounts User"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "OPD Patient Entry",
+   "link_to": "Patient Appointment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "IPD Entry",
+   "link_to": "Inpatient Record",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Patient List",
+   "link_to": "Patient",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "IPD List",
+   "link_to": "Inpatient Record",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "OPD List",
+   "link_to": "Patient Appointment",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Counter & Billing Desk",
+ "type": "Workspace"
+}
